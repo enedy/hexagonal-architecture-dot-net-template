@@ -1,21 +1,22 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using System;
-using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
-namespace Template.Api.Configuration
+namespace Template.Api.Extensions
 {
-    public static class SwaggerConfig
+    /// <summary>
+    /// 
+    /// </summary>
+    public static class SwaggerConfigExtensions
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
         public static IServiceCollection AddSwaggerConfig(this IServiceCollection services)
         {
             services.AddSwaggerGen(c =>
@@ -51,6 +52,12 @@ namespace Template.Api.Configuration
             return services;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="provider"></param>
+        /// <returns></returns>
         public static IApplicationBuilder UseSwaggerConfig(this IApplicationBuilder app, IApiVersionDescriptionProvider provider)
         {
             //app.UseMiddleware<SwaggerAuthorizedMiddleware>();
@@ -69,12 +76,23 @@ namespace Template.Api.Configuration
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class ConfigureSwaggerOptions : IConfigureOptions<SwaggerGenOptions>
     {
         readonly IApiVersionDescriptionProvider provider;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="provider"></param>
         public ConfigureSwaggerOptions(IApiVersionDescriptionProvider provider) => this.provider = provider;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="options"></param>
         public void Configure(SwaggerGenOptions options)
         {
             var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -106,8 +124,16 @@ namespace Template.Api.Configuration
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class SwaggerDefaultValues : IOperationFilter
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="operation"></param>
+        /// <param name="context"></param>
         public void Apply(OpenApiOperation operation, OperationFilterContext context)
         {
             if (operation.Parameters == null)
@@ -145,15 +171,27 @@ namespace Template.Api.Configuration
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class SwaggerAuthorizedMiddleware
     {
         private readonly RequestDelegate _next;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="next"></param>
         public SwaggerAuthorizedMiddleware(RequestDelegate next)
         {
             _next = next;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public async Task Invoke(HttpContext context)
         {
             if (context.Request.Path.StartsWithSegments("/swagger")

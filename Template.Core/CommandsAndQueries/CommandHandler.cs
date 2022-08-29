@@ -1,6 +1,5 @@
 ﻿using FluentValidation.Results;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Threading.Tasks;
 using Template.Shared.Core.Communication.Mediator;
 using Template.Shared.Core.Messages;

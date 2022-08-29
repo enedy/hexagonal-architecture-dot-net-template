@@ -1,25 +1,25 @@
-﻿using Template.Shared.Core.Communication.Mediator;
-using Template.Shared.Core.Messages.Notifications;
+﻿using Template.Shared.Core.Messages.Notifications;
 using Template.Shared.Core.Messages.Notifications.Mediator;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Template.Api.Configuration
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [ApiController]
-    public abstract class MainApiController : ControllerBase
+    public abstract class MainApiConfiguration : ControllerBase
     {
-        protected IEnumerable<long> AppsId { get; set; }
-
         private readonly DomainNotificationHandler _notifications;
-        private readonly IMediatorHandler _mediatorHandler;
-        protected MainApiController(INotificationHandler<DomainNotification> notifications,
-                                 IMediatorHandler mediatorHandler)
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="notifications"></param>
+        protected MainApiConfiguration(INotificationHandler<DomainNotification> notifications)
         {
             _notifications = (DomainNotificationHandler)notifications;
-            _mediatorHandler = mediatorHandler;
         }
 
         /// <summary>

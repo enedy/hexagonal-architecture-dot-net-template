@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using Template.Api.Configuration;
+using Template.Api.Extensions;
 using Template.Api.Logging;
 using Template.Api.Middleware;
 using Template.Domain.Constants;

@@ -12,14 +12,18 @@ namespace Template.Domain.Dependencies
     {
         public static void AddDomainModule(this IServiceCollection services)
         {
-            // Comandos
+            // Commands
             services.AddScoped<IRequestHandler<AddUserCommand, Guid>, AddUserCommandHandler>();
+            services.AddScoped<IRequestHandler<UpdatePartialUserCommand, bool>, UpdatePartialUserCommandHandler>();
+            services.AddScoped<IRequestHandler<UpdateUserCommand, bool>, UpdateUserCommandHandler>();
+            services.AddScoped<IRequestHandler<DeleteUserCommand, bool>, DeleteUserCommandHandler>();
 
-            // Eventos
+            // Events
             services.AddScoped<INotificationHandler<UserCreatedEvent>, UserCreatedEventHandler>();
 
             // Queries
             services.AddScoped<IRequestHandler<GetUsersQueries, IEnumerable<UserDTO>>, GetUsersQueriesHandler>();
+            services.AddScoped<IRequestHandler<GetUserByIdQueries, UserDTO>, GetUserByIdQueriesHandler>();
         }
     }
 }

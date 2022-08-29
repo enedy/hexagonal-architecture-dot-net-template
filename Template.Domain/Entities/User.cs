@@ -24,8 +24,22 @@ namespace Template.Domain.Entities
         public Guid CreationUserId { get; private set; }
         public DateTime CreationDate { get; private set; }
         public string CreationProgram { get; private set; }
-        public long? UpdateUserId { get; private set; }
+        public Guid? UpdateUserId { get; private set; }
         public DateTime? UpdateDate { get; private set; }
         public string UpdateProgram { get; private set; }
+
+        public void UpdateName(string name, string updateProgram)
+        {
+            Name = name;
+
+            Audit(updateProgram);
+        }
+
+        public void Audit(string updateProgram)
+        {
+            UpdateUserId = Guid.NewGuid();
+            UpdateDate = DateTime.UtcNow;
+            UpdateProgram = updateProgram;
+        }
     }
 }

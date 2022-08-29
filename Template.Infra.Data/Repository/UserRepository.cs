@@ -18,6 +18,16 @@ namespace Template.Infra.Data.Repository
             return await _context.User.ToListAsync(cancellationToken);
         }
 
+        public async Task<User> GetUserByIdAsync(Guid id, CancellationToken cancellationToken)
+        {
+            return await _context.User.FirstOrDefaultAsync(user => user.Id == id, cancellationToken);
+        }
+
+        public void DeleteUserAsync(User user)
+        {
+            _context.User.Remove(user);
+        }
+
         public async Task SaveUserAsync(User user, CancellationToken cancellationToken)
         {
             await _context.User.AddAsync(user, cancellationToken);

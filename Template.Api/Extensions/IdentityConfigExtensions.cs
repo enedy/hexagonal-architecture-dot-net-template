@@ -1,9 +1,17 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Template.Api.Configuration
+namespace Template.Api.Extensions
 {
-    public static class IdentityConfig
+    /// <summary>
+    /// 
+    /// </summary>
+    public static class IdentityConfigExtensions
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
         public static IServiceCollection AddIdentityConfiguration(this IServiceCollection services)
         {
             // JWT

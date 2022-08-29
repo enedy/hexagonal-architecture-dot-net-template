@@ -4,7 +4,7 @@ namespace Template.Domain.Entities.Interfaces
 {
     public interface IUpdate
     {
-        public long? UpdateUserId { get; }
+        public Guid? UpdateUserId { get; }
         public DateTime? UpdateDate { get; }
         public string UpdateProgram { get; }
     }

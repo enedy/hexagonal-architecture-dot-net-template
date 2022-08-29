@@ -6,14 +6,21 @@ using Template.Domain.Dependencies;
 using Template.Infra.CrossCutting;
 using Template.Infra.Data.Dependencies;
 
-namespace Template.Api.Configuration
+namespace Template.Api.Extensions
 {
-    public static class DependencyResolverServices
+    /// <summary>
+    /// 
+    /// </summary>
+    public static class DependencyResolverServicesExtensions
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="services"></param>
         public static void RegisterServices(this IServiceCollection services)
         {
             // Mediator
-            services.AddMediatR(typeof(DependencyResolverServices));
+            services.AddMediatR(typeof(DependencyResolverServicesExtensions));
             services.AddScoped<IMediatorHandler, MediatorHandler>();
 
             // Notifications

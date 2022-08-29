@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Template.Shared.Core.Messages
 {
@@ -7,8 +6,6 @@ namespace Template.Shared.Core.Messages
     {
         [NotMapped]
         public string MessageType { get; protected set; }
-        [NotMapped]
-        public Guid AggregateId { get; protected set; }
 
         public Message()
         {

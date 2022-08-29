@@ -4,6 +4,7 @@ using Template.Infra.Data.Extensions;
 using Template.Shared.Core.Communication.Mediator;
 using Template.Shared.Core.Data;
 using Template.Shared.Core.DomainObjects;
+using Template.Shared.Core.Messages;
 
 namespace Template.Infra.Data.Contexts
 {
@@ -22,6 +23,7 @@ namespace Template.Infra.Data.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Ignore<Entity>();
+            modelBuilder.Ignore<Event>();
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(Context).Assembly);
         }

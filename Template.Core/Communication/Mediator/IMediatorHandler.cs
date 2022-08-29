@@ -8,14 +8,14 @@ namespace Template.Shared.Core.Communication.Mediator
 {
     public interface IMediatorHandler
     {
-        // COMMANDS
+        // Commands
         Task<TResponse> SendCommand<TResponse>(ICommand<TResponse> command);
         Task<TResponse> SendQuery<TResponse>(IQuery<TResponse> query);
-        // EXCEPTIONS/NOTIFICATIONS
+        // Exceptions/Notifications
         Task PublishNotification<T>(T notification) where T : DomainNotification;
-        // INTEGRATION EVENTS
+        // Integration Events
         Task PublishEvent<T>(T evento) where T : Event;
-        // DOMAIN EVENTS
+        // Domain Events
         Task PublishDomainEvent<T>(T domainEvent) where T : DomainEvent;
     }
 }

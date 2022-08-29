@@ -61,11 +61,29 @@ namespace Template.Domain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The id is required..
+        /// </summary>
+        public static string RequiredId {
+            get {
+                return ResourceManager.GetString("RequiredId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The name is required..
         /// </summary>
         public static string RequiredName {
             get {
                 return ResourceManager.GetString("RequiredName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User not found..
+        /// </summary>
+        public static string UserNotFound {
+            get {
+                return ResourceManager.GetString("UserNotFound", resourceCulture);
             }
         }
     }

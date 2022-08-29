@@ -1,10 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Template.Api.Configuration
+namespace Template.Api.Extensions
 {
-    public static class ApiConfig
+    /// <summary>
+    /// 
+    /// </summary>
+    public static class ApiConfigExtensions
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
         public static IServiceCollection WebApiConfig(this IServiceCollection services)
         {
             services.AddControllers();
