@@ -38,7 +38,7 @@ namespace Template.Api.v2.Controllers
         }
 
         /// <summary>
-        /// Used to get all users
+        /// Get all users
         /// </summary>
         /// <returns></returns>
         [Route("users"), HttpGet]
@@ -53,7 +53,7 @@ namespace Template.Api.v2.Controllers
         }
 
         /// <summary>
-        /// Used to get a user by id
+        /// Get a user by id
         /// </summary>
         /// <returns></returns>
         [Route("users/{id}"), HttpGet]
@@ -68,7 +68,7 @@ namespace Template.Api.v2.Controllers
         }
 
         /// <summary>
-        /// Used to start a sync process
+        /// Start a sync process
         /// </summary>
         /// <returns></returns>
         [Route("users/accepted"), HttpPost]
@@ -81,7 +81,7 @@ namespace Template.Api.v2.Controllers
         }
 
         /// <summary>
-        /// Used to create a resource
+        /// Create a user
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
@@ -101,7 +101,7 @@ namespace Template.Api.v2.Controllers
         }
 
         /// <summary>
-        /// Used to create a resource (example error)
+        /// Create a user (example error)
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
@@ -121,7 +121,7 @@ namespace Template.Api.v2.Controllers
         }
 
         /// <summary>
-        /// Used to delete a resource
+        /// Delete a user
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -139,7 +139,7 @@ namespace Template.Api.v2.Controllers
         }
 
         /// <summary>
-        /// Used to update all user resource
+        /// Update a user
         /// </summary>
         /// <param name="id"></param>
         /// <param name="updateUserCommand"></param>
