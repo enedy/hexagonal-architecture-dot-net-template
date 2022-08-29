@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Domain", "Template.Domain\Template.Domain.csproj", "{72D3774F-CFAD-4FB4-A7E6-C0E998538B34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Domain", "src\Template.Domain\Template.Domain.csproj", "{72D3774F-CFAD-4FB4-A7E6-C0E998538B34}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Infra.CrossCutting", "Template.Infra.CrossCutting\Template.Infra.CrossCutting.csproj", "{B85F3A00-84D6-46A3-B4AF-5FF2DC2B799B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Infra.CrossCutting", "src\Template.Infra.CrossCutting\Template.Infra.CrossCutting.csproj", "{B85F3A00-84D6-46A3-B4AF-5FF2DC2B799B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Shared.Core", "Template.Core\Template.Shared.Core.csproj", "{BF90F5FA-EA94-49F5-B8B6-CF0B6B16CE80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Shared.Core", "src\Template.Core\Template.Shared.Core.csproj", "{BF90F5FA-EA94-49F5-B8B6-CF0B6B16CE80}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{0E2D87C4-7BBA-42B9-8CE1-57FF88EF4ECE}"
 EndProject
@@ -17,9 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{96AE9C69
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{623F8453-0FDE-4C60-A8F5-AB9E944BFF59}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Infra.Data", "Template.Infra.Data\Template.Infra.Data.csproj", "{700F59E1-2CF6-4766-B5A8-3A60AB8E976E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Infra.Data", "src\Template.Infra.Data\Template.Infra.Data.csproj", "{700F59E1-2CF6-4766-B5A8-3A60AB8E976E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Api", "Template.Api\Template.Api.csproj", "{BFB2F019-42F9-4630-B67D-A8D61B90C2C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Api", "src\Template.Api\Template.Api.csproj", "{BFB2F019-42F9-4630-B67D-A8D61B90C2C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
