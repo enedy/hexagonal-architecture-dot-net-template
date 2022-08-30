@@ -1,4 +1,4 @@
-# Open-source template to start a new project
+# Open source template to start a new project
 
 ## Technologies
 - .Net 6
