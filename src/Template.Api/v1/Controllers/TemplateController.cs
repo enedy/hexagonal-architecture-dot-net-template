@@ -14,7 +14,7 @@ using Template.Shared.Core.Messages.Notifications;
 namespace Template.Api.v1.Controllers
 {
     /// <summary>
-    /// Template Controller
+    /// Template Controller - TODO: Implement authorization
     /// </summary>
     [ApiVersion("1", Deprecated = true)]
     [Route("api/v{version:apiVersion}/template")]
