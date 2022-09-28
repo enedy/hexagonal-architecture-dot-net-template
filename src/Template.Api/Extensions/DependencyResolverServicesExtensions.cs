@@ -27,7 +27,7 @@ namespace Template.Api.Extensions
             services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
 
             // INFRA
-            services.AddCrossCuttingModule();
+            services.AddInfraCrossCuttingModule();
 
             var environmentVariables = services.BuildServiceProvider().GetService<IEnvironmentVariables>();
 
