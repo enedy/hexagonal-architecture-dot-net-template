@@ -26,8 +26,13 @@ namespace Template.Api.Extensions
             // Notifications
             services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
 
+            // INFRA
+            services.AddCrossCuttingModule();
+
+            var environmentVariables = services.BuildServiceProvider().GetService<IEnvironmentVariables>();
+
             // Repository
-            services.AddDataBaseModule(new EnvironmentVariables().ConnectionString);
+            services.AddDataBaseModule(environmentVariables.ConnectionString);
 
             // Domain
             services.AddDomainModule();

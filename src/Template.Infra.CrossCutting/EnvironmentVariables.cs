@@ -1,16 +1,18 @@
-﻿namespace Template.Infra.CrossCutting
+﻿using Microsoft.Extensions.Configuration;
+
+namespace Template.Infra.CrossCutting
 {
-    public class EnvironmentVariables
+    public class EnvironmentVariables : IEnvironmentVariables
     {
-        public EnvironmentVariables()
+        private readonly IConfiguration _configuration;
+
+        public EnvironmentVariables(IConfiguration configuration)
         {
+            _configuration = configuration;
             CreateConnectionStrings();
         }
 
         public string ConnectionString { get; private set; }
-        private void CreateConnectionStrings()
-        {
-            ConnectionString = Environment.GetEnvironmentVariable("ConnectionString");
-        }
+        private void CreateConnectionStrings() => ConnectionString = _configuration["ConnectionString"];
     }
 }

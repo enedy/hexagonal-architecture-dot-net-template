@@ -8,8 +8,6 @@ using Template.Domain.Constants;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.WebApiConfig();
 builder.Services.AddSwaggerConfig();
 
