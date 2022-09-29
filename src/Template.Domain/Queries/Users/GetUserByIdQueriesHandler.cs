@@ -1,7 +1,7 @@
 ﻿using Template.Shared.Core.CommandsAndQueries;
 using System.Threading;
 using System.Threading.Tasks;
-using Template.Domain.Repository;
+using Template.Domain.Interfaces.Repository;
 using Template.Domain.DTOs;
 
 namespace Template.Domain.Commands

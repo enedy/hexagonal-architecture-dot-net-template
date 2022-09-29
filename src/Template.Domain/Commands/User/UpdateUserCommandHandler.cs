@@ -2,8 +2,8 @@
 using Template.Shared.Core.Communication.Mediator;
 using System.Threading;
 using System.Threading.Tasks;
-using Template.Domain.Repository;
 using Template.Domain.Resources;
+using Template.Domain.Interfaces.Repository;
 
 namespace Template.Domain.Commands
 {

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Template.Domain.Interfaces.CrossCutting;
 
 namespace Template.Infra.CrossCutting
 {

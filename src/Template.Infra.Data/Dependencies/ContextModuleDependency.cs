@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Template.Domain.Repository;
+using Template.Domain.Interfaces.Repository;
 using Template.Infra.Data.Contexts;
 using Template.Infra.Data.Repository;
 

@@ -5,6 +5,7 @@ using MediatR;
 using Template.Domain.Dependencies;
 using Template.Infra.CrossCutting;
 using Template.Infra.Data.Dependencies;
+using Template.Domain.Interfaces.CrossCutting;
 
 namespace Template.Api.Extensions
 {

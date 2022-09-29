@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Template.Domain.Interfaces.CrossCutting;
 
 namespace Template.Infra.CrossCutting
 {

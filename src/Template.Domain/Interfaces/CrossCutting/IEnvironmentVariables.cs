@@ -1,4 +1,4 @@
-﻿namespace Template.Infra.CrossCutting
+﻿namespace Template.Domain.Interfaces.CrossCutting
 {
     public interface IEnvironmentVariables
     {

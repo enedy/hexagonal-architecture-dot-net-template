@@ -5,7 +5,7 @@ using Template.Domain.Entities;
 using System.Collections.Generic;
 using System;
 
-namespace Template.Domain.Repository
+namespace Template.Domain.Interfaces.Repository
 {
     public interface IUserRepository : IRepository<User>
     {

@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Template.Infra.Data.Contexts;
-using Template.Domain.Repository;
 using Template.Shared.Core.Data;
 using Template.Domain.Entities;
+using Template.Domain.Interfaces.Repository;
 
 namespace Template.Infra.Data.Repository
 {

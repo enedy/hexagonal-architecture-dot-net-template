@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Template.Domain.Entities;
 using Template.Domain.Events;
-using Template.Domain.Repository;
+using Template.Domain.Interfaces.Repository;
 using System;
 
 namespace Template.Domain.Commands
